@@ -3,6 +3,7 @@ import { notification } from 'antd';
 import { routerRedux } from 'dva/router';
 import store from '../index';
 
+const apiUrl = ''; // 'http://192.168.1.1';
 const codeMessage = {
   200: '服务器成功返回请求的数据',
   201: '新建或修改数据成功。',
@@ -43,6 +44,7 @@ function checkStatus(response) {
  * @return {object}           An object containing either "data" or "err"
  */
 export default function request(url, options) {
+  const electronUrl = `${apiUrl}${url}`;
   const defaultOptions = {
     credentials: 'include',
   };
@@ -56,7 +58,7 @@ export default function request(url, options) {
     newOptions.body = JSON.stringify(newOptions.body);
   }
 
-  return fetch(url, newOptions)
+  return fetch(electronUrl, newOptions)
     .then(checkStatus)
     .then((response) => {
       if (newOptions.method === 'DELETE' || response.status === 204) {

@@ -5,6 +5,11 @@ export async function query() {
 }
 
 export async function queryCurrent() {
-  return {};
+  return {
+      name: 'Serati Ma',
+      avatar: 'https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png',
+      userid: '00000001',
+      notifyCount: 12
+  };
   // return request('/api/currentUser');
 }
