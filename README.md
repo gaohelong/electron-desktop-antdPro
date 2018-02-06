@@ -1,7 +1,7 @@
 ### electron desktop
 
 ```javascript
-中文资料站 -> https://electronjs.org/
+中文资料站 -> https://electronjs.org/      https://electronjs.org/
 
 下例子资料站 -> https://medium.com/@kitze/%EF%B8%8F-from-react-to-an-electron-app-ready-for-production-a0468ecb1da3
 

@@ -6,6 +6,7 @@
   ],
   "env": {
     "development": {
+      "publicPath": "http://localhost:8000/",
       "extraBabelPlugins": [
         "dva-hmr"
       ]
